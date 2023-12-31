@@ -37,7 +37,7 @@ String charCodeAt()
 String split() 
 */
 /*
-    INDESX
+    INDEX
 A = 0    -26
 B = 1    -25
 C = 2    -24
@@ -76,7 +76,8 @@ Z = 25   -1
 
 //extracting parts
 
-//slice always happen from left to right
+//slice always works from left to right
+//slice arguments are uni-directional
 //slice: slice(start index, end index)
 // from start index to before of end index (not to end index)
 {
@@ -107,3 +108,31 @@ Z = 25   -1
     let part = text.slice(-25);
     console.log(part);
 }
+
+//substring arguments are multi-directional. smaller argument is considered as start index.
+// substring:substring(index, index)
+{
+    let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let part = text.substring(9, 0); /*as substring arguments are multi-directional, here 0 is considered as start index though it is passed as second argument. */
+    console.log(part);
+}
+{
+    let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let part = text.substring(0, 9);
+    console.log(part);
+}
+
+//substring(start index)
+//from start index to last 
+{
+    let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let part = text.substring(1); 
+    console.log(part);
+}
+//unlike slice arguments less than 0 is considered as 0
+{
+    let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let part = text.substring(-115, 9); 
+    console.log(part);
+}
+
