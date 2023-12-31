@@ -249,7 +249,26 @@ Strings are immutable: Strings cannot be changed, only replaced. */
 //The trim() method removes whitespace from both sides of a string
 
 {
-    let text1 = " '     Hello World!     ' ";
+    let text1 = "      Hello World!      ";
     let text2 = text1.trim();
     console.log(text2);
+}
+
+// trimStart and trimEnd methods
+
+{
+    let text1 = "       hi my name is emon     ";
+    let text2 = text1.trimStart();
+    console.log(text2);
+    let text3 = text1.trimEnd();
+    console.log(text3);
+}
+
+//string padding
+// padStart(padding length, padding string), padEnd(padding length, padding string)
+{
+    let text = "5";
+    let text2 = text.padStart(5, "x");
+    let text3 = text.padEnd(5, "x");
+    console.log(text2, text3);
 }
