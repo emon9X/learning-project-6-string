@@ -221,6 +221,14 @@ Z = 25   -1
 }
 
 // toUpperCase method 
+// toLowerCase method
+//gives new string. Keeps the main string unchanged
 {
-    
+    let text1 = "Hello World!";
+    let text2 = text1.toUpperCase();
+    let text3 = text1.toLowerCase();
+    console.log(text2);
+    console.log(text3);
+    console.log(text1);
+
 }
