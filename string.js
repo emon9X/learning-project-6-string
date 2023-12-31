@@ -265,10 +265,26 @@ Strings are immutable: Strings cannot be changed, only replaced. */
 }
 
 //string padding
+//To pad a number, convert the number to a string first
 // padStart(padding length, padding string), padEnd(padding length, padding string)
 {
     let text = "5";
     let text2 = text.padStart(5, "x");
     let text3 = text.padEnd(5, "x");
     console.log(text2, text3);
+}
+
+//Extracting String Characters
+// There are 3 methods for extracting string characters:
+
+// charAt(index)
+// charCodeAt(index) /*The method returns a UTF-16 code (an integer between 0 and 65535). */
+// Property access [index] /*doesn't change string like array. String is immutable */
+
+{
+    let text = "HELLO WORLD";
+    let text1 = text.charAt(0)
+    let text2 = text.charCodeAt(0);
+    let text3 = text[0];
+    console.log(text1, text2, text3)
 }
