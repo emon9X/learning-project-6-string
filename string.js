@@ -283,8 +283,34 @@ Strings are immutable: Strings cannot be changed, only replaced. */
 
 {
     let text = "HELLO WORLD";
-    let text1 = text.charAt(0)
+    let text1 = text.charAt(0);
     let text2 = text.charCodeAt(0);
     let text3 = text[0];
     console.log(text1, text2, text3)
+}
+
+{
+    let text = "";
+    let text1 = text.charAt(0); /*gives empty string */
+    let text2 = text[0]; /* give undefined */
+    let text3 = text.charAt(3); /*gives empty string */
+    let text4= text[3]; /* give undefined */
+    console.log('text1 '+text1, 'text2 '+text2, 'text3 '+text3, 'text4 '+text4);
+}
+
+//convert string to array
+//split method
+//split(separator)
+{
+    let text = "my name, is emon. I dont't | smoke. I can , play many, games. but| I can't play, with girls | heart."
+    let array1 = text.split(",")
+    console.log(array1);
+    let array2 = text.split(".")
+    console.log(array2);
+    let array3 = text.split("|")
+    console.log(array3);
+    let array4 = text.split(" ")
+    console.log(array4);
+    let array5 = text.split("")
+    console.log(array5);
 }
