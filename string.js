@@ -74,6 +74,12 @@ Z = 25   -1
     console.log(length);
 }
 
+/*All string methods return a new string. They don't modify the original string.
+
+Formally said:
+
+Strings are immutable: Strings cannot be changed, only replaced. */
+
 //extracting parts
 
 //slice always works from left to right
@@ -222,7 +228,7 @@ Z = 25   -1
 
 // toUpperCase method 
 // toLowerCase method
-//gives new string. Keeps the main string unchanged
+// gives new string. Keeps the main string unchanged
 {
     let text1 = "Hello World!";
     let text2 = text1.toUpperCase();
@@ -231,4 +237,19 @@ Z = 25   -1
     console.log(text3);
     console.log(text1);
 
+}
+
+//concat method
+{
+    let text = "".concat('text', " ", 'get');
+    console.log(text);
+}
+
+// trim method 
+//The trim() method removes whitespace from both sides of a string
+
+{
+    let text1 = " '     Hello World!     ' ";
+    let text2 = text1.trim();
+    console.log(text2);
 }
