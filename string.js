@@ -126,13 +126,78 @@ Z = 25   -1
 //from start index to last 
 {
     let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    let part = text.substring(1); 
+    let part = text.substring(1);
     console.log(part);
 }
 //unlike slice arguments less than 0 is considered as 0
 {
     let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    let part = text.substring(-115, 9); 
+    let part = text.substring(-115, 9);
     console.log(part);
 }
 
+
+//substr(start index, length)
+{
+    let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let part = text.substr(-25, 10);
+    console.log(part);
+}
+{
+    let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let part = text.substr(2, 10);
+    console.log(part);
+}
+
+//slice, substring and substr all extract string from left to right
+
+//replace string content
+//replace method
+//The replace() method does not change the string it is called on.
+//The replace() method returns a new string.
+//The replace() method replaces only the first match
+// the replace() method is case sensitive.
+
+{
+    let text = "Please visit Microsoft!";
+    let newText = text.replace("Microsoft", "W3Schools");
+    console.log(newText);
+    console.log(text); /*doesn't change the main string */
+}
+//replace method is case sensitive
+{
+    let text = "Please visit Microsoft!";
+    let newText = text.replace("MicrosoFT", "W3Schools"); /*it will give text variable unchanged */
+    console.log(newText);
+}
+//To replace case insensitive, use a regular expression with an /i flag (i for insensitive)
+//regular expression can't be used inside quotes
+{
+    let text = "Please visit Microsoft!";
+    let newText = text.replace(/microsoft/i, "W3Schools");
+    console.log(newText);
+}
+//By default, the replace() method replaces only the first match
+{
+    let text = "Please visit Microsoft and Microsoft!";
+    let newText = text.replace(/microsoft/i, "W3Schools");
+    console.log(newText);
+}
+//To replace all matches, use a regular expression with a /g flag (g for global match)
+
+{
+    let text = "Please visit Microsoft and Microsoft!";
+    let newText = text.replace(/Microsoft/g, "W3Schools");
+    console.log(newText);
+}
+{
+    let text = "Please visit Microsoft and Microsoft!";
+    let newText = text.replace(/microsoft/g, "W3Schools"); /*this will not work because here first argument is not case insensitive */
+    console.log(newText);
+}
+//to replace all matches and ommiting case sensivity at the same time use i and g (/gi)
+{
+    let text = "Please visit Microsoft and Microsoft!";
+    let newText = text.replace(/microsoft/gi, "W3Schools");
+    console.log(newText);
+}
