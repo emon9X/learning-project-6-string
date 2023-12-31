@@ -158,6 +158,7 @@ Z = 25   -1
 //The replace() method replaces only the first match
 // the replace() method is case sensitive.
 
+//replace(the string to be replaced, replacement)
 {
     let text = "Please visit Microsoft!";
     let newText = text.replace("Microsoft", "W3Schools");
@@ -200,4 +201,26 @@ Z = 25   -1
     let text = "Please visit Microsoft and Microsoft!";
     let newText = text.replace(/microsoft/gi, "W3Schools");
     console.log(newText);
+}
+
+//replaceAll(to be replaced, replacement)
+//replaceAll is case sensitive
+//replaceAll gives new string. Keeps the main string unchanged
+{
+    let text = "I love cats. Cats are very easy to love. Cats are very popular."
+    let newText = text.replaceAll("cats", "dogs"); /*replaces only cats not Cats. case sensitive */
+    console.log(newText);
+    console.log(text); /*main string remained unchanged */
+}
+// to make case insensitive 
+{
+    let text = "I love cats. Cats are very easy to love. Cats are very popular."
+    // let newText = text.replaceAll(/cats/i, "dogs"); /*only regular expression for case insensivity can't be used. It will give TypeError */
+    let newText = text.replaceAll(/cats/gi, "dogs");
+    console.log(newText);
+}
+
+// toUpperCase method 
+{
+    
 }
