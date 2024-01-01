@@ -294,8 +294,8 @@ Strings are immutable: Strings cannot be changed, only replaced. */
     let text1 = text.charAt(0); /*gives empty string */
     let text2 = text[0]; /* give undefined */
     let text3 = text.charAt(3); /*gives empty string */
-    let text4= text[3]; /* give undefined */
-    console.log('text1 '+text1, 'text2 '+text2, 'text3 '+text3, 'text4 '+text4);
+    let text4 = text[3]; /* give undefined */
+    console.log('text1 ' + text1, 'text2 ' + text2, 'text3 ' + text3, 'text4 ' + text4);
 }
 
 //convert string to array
@@ -314,3 +314,71 @@ Strings are immutable: Strings cannot be changed, only replaced. */
     let array5 = text.split("")
     console.log(array5);
 }
+// ------------------------------------------------------------------------------------------
+// String Search Methods
+
+// String indexOf()
+// String lastIndexOf()
+// String search()
+// String match()
+// String matchAll()
+// String includes()
+// String startsWith()
+// String endsWith()
+
+//indexOf(string)
+// The indexOf() method returns the index (position) the first occurrence of a string in a string
+
+{
+    let text = "Please locate where 'locate' occurs!";
+    let index = text.indexOf("locate"); /*returns first occurance of locate */
+    console.log(index);
+}
+
+//lastIndexOf(string)
+// unlike indexOf, lastIndexOf returns last position of the specified string
+{
+    let text = "Please locate where 'locate' occurs!";
+    let index = text.lastIndexOf("locate");
+    console.log(index);
+}
+//when the specified text is not found, indexOf and lastIndexOf gives -1
+{
+    let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let indexOf = text.indexOf('tom');
+    console.log(indexOf);
+    let lastIndexOf = text.lastIndexOf('tom');
+    console.log(lastIndexOf);
+}
+
+// indexOf(string, start index) , lastIndexOf(string, start index)
+// -------->searching direction,    <------searching direction
+// to right, to left
+
+{
+    let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let indexOf = text.indexOf('Y', 15); /*starts from 15(P) and search to the right and finds Y at 24 */
+    let indexOf2 = text.indexOf('A', 15); /*starts from 15(P) and search to the right and doesn't find A so returns -1*/
+    console.log(indexOf);
+    console.log(indexOf2);
+
+    let lastIndexof = text.lastIndexOf('Y', 15); /*starts from 15(P) and search to the left and doesn't find Y so returns -1*/
+    console.log(lastIndexof);
+    let lastIndexOf2 = text.lastIndexOf('A', 15); /*starts from 15(P) and search to the left and finds A so returns 0*/
+    console.log(lastIndexOf2);
+}
+
+//search method
+//returns the index (position) the first occurrence of a string in a string
+{
+    let text = "Please locate where 'locate' occurs!";
+    let search = text.search("locate");
+    let search2 = text.search(/locate/);
+    let search3 = text.search(/locatt/); /*doesn't find the string so returns -1 */
+    console.log(search);
+    console.log(search2);
+    console.log(search3);
+}
+
+//match method
+//If a regular expression does not include the g modifier (global search), match() will return only the first match in the string.
