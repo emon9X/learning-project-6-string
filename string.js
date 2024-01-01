@@ -451,3 +451,28 @@ Strings are immutable: Strings cannot be changed, only replaced. */
     console.log(text4);
     console.log(text5);
 }
+
+//startsWith and endsWith method
+//return boolean value
+//case sensitive
+//startsWith(string, start index)
+{
+    let text = "Hello world, welcome to the universe.";
+    let text2 = text.startsWith("Hello");
+    console.log(text2);
+    let text3 = text.startsWith("world");
+    console.log(text3);
+    let text4 = text.startsWith("world", 6)
+    console.log(text4);
+}
+
+//endsWith(string, last index)
+{
+    let text = "Hello world, welcome to the universe.";
+    let text2 = text.endsWith("universe.");
+    console.log(text2);
+    let text3 = text.endsWith("world");
+    console.log(text3);
+    let text4 = text.endsWith("world", 11) /*d is located at index 10 */
+    console.log(text4);
+}
