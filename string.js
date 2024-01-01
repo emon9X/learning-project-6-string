@@ -417,7 +417,7 @@ Strings are immutable: Strings cannot be changed, only replaced. */
     let text = "I love cats. Cats are very easy to love. Cats are very popular."
     let match = text.matchAll("Cats"); /*here match is an object. which properties are array */
     console.log(match);
-    for(let m of match) {
+    for (let m of match) {
         console.log(m); /**here m is an array */
         console.log(m[0]); /*m[0] gives the first element of m arrary. */
     }
@@ -429,8 +429,25 @@ Strings are immutable: Strings cannot be changed, only replaced. */
     let text = "I love cats. Cats are very easy to love. Cats are very popular."
     let match = text.matchAll(/cats/gi); /*here match is an object. which properties are array */
     console.log(match);
-    for(let m of match) {
+    for (let m of match) {
         console.log(m); /**here m is an array */
         console.log(m[0]); /*m[0] gives the first element of m array. */
     }
+}
+
+//includes method
+//includes(string)
+//includes(string, start index)
+//it returns boolean result
+//it is case sensitive
+{
+    let text = "Hello world, welcome to the universe.";
+    let text2 = text.includes("world");
+    let text3 = text.includes("World");
+    let text4 = text.includes("world", 1)
+    let text5 = text.includes("world", 8)
+    console.log(text2);
+    console.log(text3);
+    console.log(text4);
+    console.log(text5);
 }
