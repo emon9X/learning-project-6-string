@@ -369,6 +369,7 @@ Strings are immutable: Strings cannot be changed, only replaced. */
 }
 
 //search method
+//search(string)
 //returns the index (position) the first occurrence of a string in a string
 {
     let text = "Please locate where 'locate' occurs!";
@@ -381,4 +382,55 @@ Strings are immutable: Strings cannot be changed, only replaced. */
 }
 
 //match method
+//match(string)
 //If a regular expression does not include the g modifier (global search), match() will return only the first match in the string.
+//it is a case sensitive method
+
+{
+    let text = "The rain in SPAIN stays mainly in the plain";
+    let text2 = text.match("ain");
+    let text3 = text.match(/ain/);
+    console.log(text2);
+    console.log(text3);
+}
+
+// Perform a global search
+{
+    let text = "The rain in SPAIN stays mainly in the plain";
+    let text3 = text.match(/ain/g);
+    console.log(text3);
+}
+
+//make match method case insensitive
+
+{
+    let text = "The rain in SPAIN stays mainly in the plain";
+    let text3 = text.match(/ain/gi);
+    console.log(text3);
+}
+
+//matchAll method
+//matchAll(string)
+// case sensitive method
+// it gives RegExpStringIterator, which is an object
+{
+    let text = "I love cats. Cats are very easy to love. Cats are very popular."
+    let match = text.matchAll("Cats"); /*here match is an object. which properties are array */
+    console.log(match);
+    for(let m of match) {
+        console.log(m); /**here m is an array */
+        console.log(m[0]); /*m[0] gives the first element of m arrary. */
+    }
+}
+
+// make matchAll() method case insensitive
+
+{
+    let text = "I love cats. Cats are very easy to love. Cats are very popular."
+    let match = text.matchAll(/cats/gi); /*here match is an object. which properties are array */
+    console.log(match);
+    for(let m of match) {
+        console.log(m); /**here m is an array */
+        console.log(m[0]); /*m[0] gives the first element of m array. */
+    }
+}
